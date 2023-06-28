@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Steller Landing page | Free Bootstrap 4.1 landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'main/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + Steller main styles -->
+	<link rel="stylesheet" href="{% static 'main/css/steller.css' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{%static 'main/images/logo.svg' %}" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">About</a>
+                    </li> {% endcomment %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'service' %}">Service</a>
+                    </li>                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+                    </li>
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Testmonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li> {% endcomment %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    {% comment %} <li class="nav-item">
+                        <a class="- btn btn-primary rounded ml-4" href="components.html">Copmonents</a>
+                    </li> {% endcomment %}
+                </ul>
+            </div>
+        </div>          
+    </nav>
+    <!-- End of page navibation -->
+
+    {% block content %}
+
+    {% endblock %}
+
+        <!-- Page Footer -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    {% comment %} <div class="col-sm-6">
+                        <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com" target="_blank">DevCRUD</a></p>
+                    </div> {% endcomment %}
+                    <div class="col-sm-7">
+                        <div class="socials">
+                            <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
+                            <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
+                            <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
+                            <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+        <!-- End of page footer -->
+        
+        <!-- core  -->
+        <script src="{% static 'main/vendors/jquery/jquery-3.4.1.js' %}"></script>
+        <script src="{% static 'main/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+        <!-- bootstrap 3 affix -->
+        <script src="{% static 'main/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+    
+        <!-- steller js -->
+        <script src="{% static 'main/js/steller.js' %}"></script>
+    
+    </body>
+    </html>

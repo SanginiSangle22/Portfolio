@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %} {% load static %} {% block content %}
+<!-- Portfolio section -->
+<section id="portfolio" class="section">
+    <div class="container text-center">
+        <h6 class="subtitle">Portfolio</h6>
+        <h6 class="section-title mb-4">Check My Wonderful Works</h6>
+        <p class="mb-5 pb-4">{{desc.desc|linebreaksbr}}</p>
+
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-sm-4">
+                <div class="img-wrapper">
+                    <img src="{{project.img.url}}" alt="">
+                    <div class="overlay">
+                        <div class="overlay-infos">
+                            <h5>{{project.project_title}}</h5>
+                            <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                            <a href="{{project.project_link}}"><i class="ti-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    </div>
+</section>
+<section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</section>
+<!-- End of portfolio section -->
+{% endblock %}

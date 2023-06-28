@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %} {% load static %} {% block content %}
+<!-- Page Header -->
+<header class="header" id="home">
+    <div class="container">
+        <div class="infos">
+            <h6 class="subtitle">hello,I'm</h6>
+            <h6 class="title">{{profile.user.first_name}} {{profile.user.last_name}}</h6>
+            <p>{{profile.tagline}}</p>
+
+            <div class="buttons pt-3">
+                <a href="{% url 'contact' %}"><button class="btn btn-primary rounded">HIRE ME</button></a>
+                <a href="{% url 'download'%}"><button class="btn btn-dark rounded">DOWNLOAD CV</button></a>
+            </div>
+
+            <div class="socials mt-4">
+                <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
+                <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
+                <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
+                <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+            </div>
+        </div>
+        <div class="img-holder">
+            <img src="{% static 'main/images/prof.png' %}" alt="">
+        </div>
+    </div>
+
+
+</header>
+<!-- End of Page Header -->
+
+<!-- About section -->
+<section id="about" class="section mt-3">
+    <div class="container mt-5">
+        <div class="row text-center text-md-left">
+            <div class="col-md-3">
+                <img src="{{profile.profile_img.url}}" alt="" class="img-thumbnail mb-4">
+            </div>
+            <div class="pl-md-4 col-md-9">
+                <h6 class="title">{{profile.user.first_name}} {{profile.user.last_name}}</h6>
+                <p class="subtitle">{{profile.tagline}}</p>
+                <p>{{profile.about_me|linebreaksbr}}</p>
+                <a href="{% url 'download'%}"><button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

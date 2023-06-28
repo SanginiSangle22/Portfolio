@@ -1,0 +1,64 @@
+{% extends 'main/base.html' %} {% block content %}
+<!-- Contact Section -->
+<section id="contact" class="position-relative section">
+    <div class="container text-center">
+        <h6 class="subtitle">Contact</h6>
+        <h6 class="section-title mb-4">Get In Touch With Me</h6>
+        <br>
+        <br>
+        <br> {% comment %}
+        <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p> {% endcomment %}
+
+        <div class="contact text-left">
+            <div class="form">
+
+                <h6 class="section-title mb-4">Get In Touch</h6>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Mobile No." name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-infos">
+                <div class="item">
+                    <i class="ti-location-pin"></i>
+                    <div class="">
+                        <h5>Location</h5>
+                        <p>{{profile.address}}</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="ti-mobile"></i>
+                    <div>
+                        <h5>Phone Number</h5>
+                        <p>{{profile.phone}}</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="ti-email"></i>
+                    <div class="mb-0">
+                        <h5>Email Address</h5>
+                        <p>{{profile.user.email}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map">
+        <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q={{maps.map}}&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    </div>
+</section>
+<!-- End of Contact Section -->
+
+{% endblock %}
