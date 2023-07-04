@@ -84,11 +84,10 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "railway",
-        "USER": "postgres",
-        "PASSWORD": "nNBk5qXI01yl92xgsLsQ",
-        "HOST": "containers-us-west-94.railway.app",
-        "PORT": 7915,
+        "NAME": "verceldb",
+        "USER": "default",
+        "PASSWORD": "Dkpd7V6Ysjlm",
+        "HOST": "ep-icy-silence-999682-pooler.us-east-1.postgres.vercel-storage.com"
     }
 }
 
