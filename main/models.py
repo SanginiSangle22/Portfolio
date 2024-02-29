@@ -6,7 +6,8 @@ class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     phone = models.CharField(max_length=13, null=True, blank=True)
     address = models.CharField(max_length=1000, null = True, blank=True)
-    profile_img = models.ImageField(blank=True, upload_to='images', default='images/profile.jpg')
+    # profile_img = models.ImageField(blank=True, upload_to='images', default='images/profile.jpg')
+    profile_img = models.CharField(max_length=1000)
     about_me = models.TextField(max_length=5000, blank=True, null=True)
     tagline = models.CharField(max_length=100, null=True, blank=True)
     
@@ -59,7 +60,8 @@ class Contact(models.Model):
 class Portfolio(models.Model):
     project_title = models.CharField(max_length=100, null=True, blank=True)
     project_link = models.CharField(max_length=1000 , null=True, blank=True)
-    img = models.ImageField(upload_to='images', default='images/project.png', null=True, verbose_name='img: (1920 x 1080)')
+    # img = models.ImageField(upload_to='images', default='images/project.png', null=True, verbose_name='img: (1920 x 1080)')
+    img = models.CharField(max_length=1000, null=True, verbose_name='img: (1920 x 1080)')
     
     def __str__(self):
         return self.project_title
