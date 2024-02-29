@@ -33,10 +33,11 @@
     <div class="container mt-5">
         <div class="row text-center text-md-left">
             <div class="col-md-3">
-                <img src="{{profile.profile_img.url}}" alt="" class="img-thumbnail mb-4">
+                <!-- <img src="{{profile.profile_img}}" alt="" class="img-thumbnail mb-4"> -->
+                <img src="https://drive.google.com/thumbnail?id={{profile.profile_img}}&sz=w450-h550" alt="" class="img-thumbnail mb-4">
             </div>
             <div class="pl-md-4 col-md-9">
-                <h6 class="title">{{profile.user.first_name}} {{profile.user.last_name}}</h6>
+                <h6 class="title">{{profile.user.first_name}} {{profile.user.last_name}} </h6>
                 <p class="subtitle">{{profile.tagline}}</p>
                 <p>{{profile.about_me|linebreaksbr}}</p>
                 <a href="{% url 'download'%}"><button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button></a>
